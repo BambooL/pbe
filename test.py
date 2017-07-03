@@ -25,7 +25,7 @@ from deap import base
 from deap import creator
 from deap import tools
 from deap import gp
-import ui
+# import ui
 
 # Read the spam list features and put it in a list of lists.
 # The dataset is from http://archive.ics.uci.edu/ml/datasets/Spambase
@@ -249,9 +249,9 @@ toolbox.register("individual", tools.initIterate, creator.Individual, toolbox.ex
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 toolbox.register("compile", gp.compile, pset=pset)
 
-def parsedata (example):
+def parsedata ():
 	result = [[]]
-	# fo = open("example", "rw+")
+	example = open("example", "rw+")
 	while (1):
 		a = example.readline()
 		if (a != "" and a[0] != '#'):
@@ -330,8 +330,8 @@ def main():
     stats.register("std", numpy.std)
     stats.register("min", numpy.min)
     stats.register("max", numpy.max)
-    algorithms.eaSimple(pop, toolbox, 0.5, 0.2, 30, stats, halloffame=hof)
-    print result_program
+    algorithms.eaSimple(pop, toolbox, 0.5, 0.2, 10, stats, halloffame=hof)
+    # print result_program
     return result_program
 
 if __name__ == "__main__":
