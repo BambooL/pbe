@@ -338,4 +338,4 @@ if __name__ == "__main__":
     main()
     output = sorted(list(result_program), key=len)
 
-    print output
+    print output[0:100]
