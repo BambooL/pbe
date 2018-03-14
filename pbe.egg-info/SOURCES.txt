@@ -1,0 +1,7 @@
+setup.py
+pbe.egg-info/PKG-INFO
+pbe.egg-info/SOURCES.txt
+pbe.egg-info/dependency_links.txt
+pbe.egg-info/not-zip-safe
+pbe.egg-info/requires.txt
+pbe.egg-info/top_level.txt
